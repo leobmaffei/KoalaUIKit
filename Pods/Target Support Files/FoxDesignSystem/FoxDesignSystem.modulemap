@@ -1,0 +1,6 @@
+framework module FoxDesignSystem {
+  umbrella header "FoxDesignSystem-umbrella.h"
+
+  export *
+  module * { export * }
+}

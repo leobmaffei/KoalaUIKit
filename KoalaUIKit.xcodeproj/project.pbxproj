@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		12AA9542270CF43D00815704 /* KoalaUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 12AA9540270CF43D00815704 /* KoalaUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EAEBDAE3AB14F0C778E43F1 /* Pods_KoalaUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E63A26249063167806EBF40 /* Pods_KoalaUIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12AA953D270CF43D00815704 /* KoalaUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KoalaUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12AA9540270CF43D00815704 /* KoalaUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KoalaUIKit.h; sourceTree = "<group>"; };
 		12AA9541270CF43D00815704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E63A26249063167806EBF40 /* Pods_KoalaUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoalaUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF7A0DB793CA5F59FB7B1110 /* Pods-KoalaUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoalaUIKit.release.xcconfig"; path = "Target Support Files/Pods-KoalaUIKit/Pods-KoalaUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		F03E71F68E96DDEF33C33EB9 /* Pods-KoalaUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoalaUIKit.debug.xcconfig"; path = "Target Support Files/Pods-KoalaUIKit/Pods-KoalaUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EAEBDAE3AB14F0C778E43F1 /* Pods_KoalaUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +37,8 @@
 			children = (
 				12AA953F270CF43D00815704 /* KoalaUIKit */,
 				12AA953E270CF43D00815704 /* Products */,
+				B55FF5FC03F89046AA2876DD /* Pods */,
+				7DB058FD967B547FB88E0A79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +59,24 @@
 			path = KoalaUIKit;
 			sourceTree = "<group>";
 		};
+		7DB058FD967B547FB88E0A79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E63A26249063167806EBF40 /* Pods_KoalaUIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B55FF5FC03F89046AA2876DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F03E71F68E96DDEF33C33EB9 /* Pods-KoalaUIKit.debug.xcconfig */,
+				DF7A0DB793CA5F59FB7B1110 /* Pods-KoalaUIKit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -70,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12AA9545270CF43D00815704 /* Build configuration list for PBXNativeTarget "KoalaUIKit" */;
 			buildPhases = (
+				E068CB35C3C7B9CEDA673B34 /* [CP] Check Pods Manifest.lock */,
 				12AA9538270CF43D00815704 /* Headers */,
 				12AA9539270CF43D00815704 /* Sources */,
 				12AA953A270CF43D00815704 /* Frameworks */,
@@ -124,6 +150,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E068CB35C3C7B9CEDA673B34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoalaUIKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12AA9539270CF43D00815704 /* Sources */ = {
@@ -260,6 +311,7 @@
 		};
 		12AA9546270CF43D00815704 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F03E71F68E96DDEF33C33EB9 /* Pods-KoalaUIKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -268,6 +320,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KoalaUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,6 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = maffei.library.KoalaUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +337,7 @@
 		};
 		12AA9547270CF43D00815704 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7A0DB793CA5F59FB7B1110 /* Pods-KoalaUIKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -291,6 +346,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KoalaUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,6 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = maffei.library.KoalaUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,0 +1,16 @@
+PODS:
+  - FoxDesignSystem (0.0.12)
+
+DEPENDENCIES:
+  - FoxDesignSystem
+
+SPEC REPOS:
+  trunk:
+    - FoxDesignSystem
+
+SPEC CHECKSUMS:
+  FoxDesignSystem: 550b2d69faa86856665bf2063db8f6d24cd10472
+
+PODFILE CHECKSUM: 7a8c581f3f97280a270a76c1c5936cc61f71f92d
+
+COCOAPODS: 1.11.2
