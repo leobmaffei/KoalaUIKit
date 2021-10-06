@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
 
   spec.author       = { "Leonardo Maffei" => "leobmaffei@gmail.com" }
 
-  spec.source       = { :path => "." }
+  spec.source       = { :path => "https://github.com/leobmaffei/KoalaUIKit.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "KoalaUIKit"
   spec.exclude_files = "Classes/Exclude"
