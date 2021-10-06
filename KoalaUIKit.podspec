@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "KoalaUIKit"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "A short description of KoalaUIKit."
   spec.description  = "A Complete description of KoalaUIKit."
 
@@ -16,5 +16,6 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "KoalaUIKit"
   spec.exclude_files = "Classes/Exclude"
+  spec.dependency 'FoxDesignSystem'
 
 end

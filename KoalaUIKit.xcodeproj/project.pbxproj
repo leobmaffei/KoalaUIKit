@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1243C34F270DE19E00976511 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1243C34D270DE19E00976511 /* DesignSystemTokens.swift */; };
+		1243C350270DE19E00976511 /* DesignSystemTokens.swift.gyb in Resources */ = {isa = PBXBuildFile; fileRef = 1243C34E270DE19E00976511 /* DesignSystemTokens.swift.gyb */; };
 		12AA9542270CF43D00815704 /* KoalaUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 12AA9540270CF43D00815704 /* KoalaUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EAEBDAE3AB14F0C778E43F1 /* Pods_KoalaUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E63A26249063167806EBF40 /* Pods_KoalaUIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1243C34D270DE19E00976511 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
+		1243C34E270DE19E00976511 /* DesignSystemTokens.swift.gyb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DesignSystemTokens.swift.gyb; sourceTree = "<group>"; };
 		12AA953D270CF43D00815704 /* KoalaUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KoalaUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12AA9540270CF43D00815704 /* KoalaUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KoalaUIKit.h; sourceTree = "<group>"; };
 		12AA9541270CF43D00815704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,9 +36,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1243C34C270DE19E00976511 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				1243C34D270DE19E00976511 /* DesignSystemTokens.swift */,
+				1243C34E270DE19E00976511 /* DesignSystemTokens.swift.gyb */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 		12AA9533270CF43D00815704 = {
 			isa = PBXGroup;
 			children = (
+				1243C34C270DE19E00976511 /* DesignSystem */,
 				12AA953F270CF43D00815704 /* KoalaUIKit */,
 				12AA953E270CF43D00815704 /* Products */,
 				B55FF5FC03F89046AA2876DD /* Pods */,
@@ -73,7 +87,6 @@
 				F03E71F68E96DDEF33C33EB9 /* Pods-KoalaUIKit.debug.xcconfig */,
 				DF7A0DB793CA5F59FB7B1110 /* Pods-KoalaUIKit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,6 +109,7 @@
 			buildConfigurationList = 12AA9545270CF43D00815704 /* Build configuration list for PBXNativeTarget "KoalaUIKit" */;
 			buildPhases = (
 				E068CB35C3C7B9CEDA673B34 /* [CP] Check Pods Manifest.lock */,
+				1243C34B270DE01600976511 /* ShellScript */,
 				12AA9538270CF43D00815704 /* Headers */,
 				12AA9539270CF43D00815704 /* Sources */,
 				12AA953A270CF43D00815704 /* Frameworks */,
@@ -146,12 +160,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1243C350270DE19E00976511 /* DesignSystemTokens.swift.gyb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1243C34B270DE01600976511 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PROJECT_DIR}/DesignSystem/DesignSystemTokens.swift.gyb",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${PROJECT_DIR}/DesignSystem/DesignSystemTokens.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/FoxDesignSystem/FoxDesignSystem/generateTagFiles.sh\n";
+		};
 		E068CB35C3C7B9CEDA673B34 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1243C34F270DE19E00976511 /* DesignSystemTokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
